@@ -10,6 +10,9 @@
   - [Chapter 5: Navigating Between Pages!](#chapter-5-navigating-between-pages)
 - [Day 2 (Jan 05)](#day-2-jan-05)
   - [Chapter 6: Setting Up My Database](#chapter-6-setting-up-my-database)
+  - [Chapter 7: Fetching Data!](#chapter-7-fetching-data)
+  - [Chapter 8: Static and Dynamic Rendering!](#chapter-8-static-and-dynamic-rendering)
+  - [Chapter 9: Streaming](#chapter-9-streaming)
 
 ---
 
@@ -72,16 +75,33 @@
 - ### Chapter 6: Setting Up My Database!
 
   - **Pushing my project to GitHub**:
+    I pushed my project to GitHub and created a new repository for it.
   - **Set up a Vercel account and link your GitHub repo for instant previews and deployments.**:
+    I set up a Vercel account and linked my GitHub repository to it. I also set up instant previews and deployments for my project.
   - **Create and link your project to a Postgres database.**:
+    I created a new Postgres database and linked it to my project using the documentation step-by-step.
   - **Seed the database with initial data.**:
+    I seeded the database with initial data using the automated process in Next-learn Documentation.
 
 - ### Chapter 7: Fetching Data!
 
   - **Learned about some approaches to fetching data: APIs, ORMs, SQL, etc.**:
+    I learned about different approaches to fetching data, including APIs, ORMs, SQL, and more.
   - **How Server Components can help you access back-end resources more securely.**:
+    I learned about how Server Components can help me access back-end resources more securely.
   - **What network waterfalls are.**:
+    I learned about what network waterfalls are and how they can be used to improve the performance of my application.
   - **How to implement parallel data fetching using a JavaScript Pattern.**:
+    I learned about how to implement parallel data fetching using a JavaScript pattern.
+
+- ### Chapter 8: Static and Dynamic Rendering!
+
+  - **Static Rendering**:
+    I learned about static rendering and how it can be used to pre-render pages at build time. I also learned about the benefits of static rendering, including faster page loads and improved SEO.
+  - **Dynamic Rendering**:
+    I learned about dynamic rendering and how it can be used to render pages at runtime. I also learned about the benefits of dynamic rendering, including the ability to handle complex logic and dynamic data.
+
+- ### Chapter 9: Streaming!
 
 ---
 
