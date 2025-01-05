@@ -102,6 +102,7 @@
     I learned about dynamic rendering and how it can be used to render pages at runtime. I also learned about the benefits of dynamic rendering, including the ability to handle complex logic and dynamic data.
 
 - ### Chapter 9: Streaming!
+
   - **What is Streaming?**:
     I learned about what streaming is and how it can be used to improve the performance of my application. I also learned about the benefits of streaming, including faster page loads even without required data and improved user experience with streaming.
   - **How to use Next.js built-in streaming features.**:
@@ -113,9 +114,22 @@
     I learned about how to use Suspense to stream only this component and immediately show the rest of the page's UI.
     - Learned to stream the whole page but that may lead to a longer loading time if one of the components has a slow data fetch.
     - Learned to stream only the component that has a slow data fetch and show the rest of the page's UI immediately.
-    - Also learned create a staggered effect by streaming page sections. But *needs*  to create wrapper components.
+    - Also learned create a staggered effect by streaming page sections. But _needs_ to create wrapper components.
 
 - ### Chapter 10: Partial Prerendering!
+  - **What is Partial Prerendering?**:
+    I learned about what partial prerendering is and how it can be used to improve the performance of my application. Next.js 14 introduced an experimental version of Partial Prerendering – a new rendering model that allows you to combine the benefits of static and dynamic rendering in the same route.
+- ### Chapter 11: Adding Search and Pagination!
+  - **Learned to use the Next.js APIs: useSearchParams, usePathname, and useRouter.**:
+    I learned about how to use the Next.js APIs: useSearchParams, usePathname, and useRouter to add search and pagination functionality to my application.
+  - **Implement search using URL search params.**:
+    I learned about how to implement search using URL search params.
+  - **How Debouncing Works**:
+    - **Trigger Event**: When an event that should be debounced (like a keystroke in the search box) occurs, a timer starts.
+    - **Wait**: If a new event occurs before the timer expires, the timer is reset.
+    - **Execution**: If the timer reaches the end of its countdown, the debounced function is executed.
+- ### Chapter 12: Mutating Data
+
 ---
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
