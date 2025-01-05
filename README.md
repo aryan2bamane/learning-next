@@ -102,7 +102,20 @@
     I learned about dynamic rendering and how it can be used to render pages at runtime. I also learned about the benefits of dynamic rendering, including the ability to handle complex logic and dynamic data.
 
 - ### Chapter 9: Streaming!
+  - **What is Streaming?**:
+    I learned about what streaming is and how it can be used to improve the performance of my application. I also learned about the benefits of streaming, including faster page loads even without required data and improved user experience with streaming.
+  - **How to use Next.js built-in streaming features.**:
+    I learned about how to use Next.js built-in streaming features to improve the performance of my application.
+    - There are two ways you implement streaming in Next.js:
+    1. At the page level, with the loading.tsx file.
+    2. For specific components, with `<Suspense>`.
+  - **Use of Suspense to stream**:
+    I learned about how to use Suspense to stream only this component and immediately show the rest of the page's UI.
+    - Learned to stream the whole page but that may lead to a longer loading time if one of the components has a slow data fetch.
+    - Learned to stream only the component that has a slow data fetch and show the rest of the page's UI immediately.
+    - Also learned create a staggered effect by streaming page sections. But *needs*  to create wrapper components.
 
+- ### Chapter 10: Partial Prerendering!
 ---
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
