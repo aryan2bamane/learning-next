@@ -19,6 +19,7 @@
   - [Chapter 13: Handling Errors](#chapter-13-handling-errors)
   - [Chapter 14: Improving Accessibility](#chapter-14-improving-accessibility)
   - [Chapter 15: Adding Authentication](#chapter-15-adding-authentication)
+  - [Chapter 16: Adding Metadata](#chapter-16-adding-metadata)
 
 ---
 
@@ -338,6 +339,8 @@ The `ImageResponse` constructor allows you to generate dynamic images using JSX 
 - Use the `title.template` field in the `metadata object` to define a `template` for your page titles. This template can include the page title, and any other information you want to include.
 
 **_The `%s` in the template will be replaced with the specific page title._**
+
+![Cpompleted Next.js](image.png)
 
 ---
 
