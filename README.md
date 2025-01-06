@@ -171,10 +171,106 @@
 - **Accessibility**:
   - Accessibility refers to designing and implementing web applications that everyone can use, including those with disabilities.
 - **Server-Side validation**:
-  - Server-side validation is a technique used to validate user input on the server-side. 
+  - Server-side validation is a technique used to validate user input on the server-side.
   - It is used to prevent malicious input from reaching the client-side. It is also used to prevent the client-side from being overwhelmed with validation errors.
 
+## Day 3 (Jan 06)
+
 ### Chapter 15: Adding Authentication
+
+- **Authentication**:
+
+  - Authentication is a key part of many web applications today. It's how a system checks if the user is who they say they are.
+
+- **Authorization**:
+
+  - Authorization is the next step. Once a user's identity is confirmed, authorization decides what parts of the application they are allowed to use.
+
+- **NextAuth.js**:
+  - NextAuth.js is a popular library for authentication in Next.js applications. It supports many authentication providers, including Google, GitHub, and more.
+- **Step 1: Install NextAuth.js**:
+  - Run the following command in your terminal: `pnpm i next-auth@beta`.
+- **Step 2: Generate a secret key for our Application**:
+  - Run the following command in your terminal: `npx auth secret`.
+- **Step 3: Adding the pages option**:
+  - Create an `auth.config.ts` file at the root of our project that exports an authConfig object.
+  - It contains config options for NextAuth.js
+- **Step 4: Add the logic to protect your routes**:
+  - This will prevent users from accessing the dashboard pages unless they are logged in.
+- **Step 5: Add the `middleware.ts` file**:
+
+  - This file will be used to protect routes in our application. It will check if the user is logged in before allowing them to access the route.
+  - The advantage of employing Middleware for this task is that the protected routes will not even start rendering until the Middleware verifies the authentication, enhancing both the security and performance of your application.
+
+  ```bash
+  import NextAuth from 'next-auth';
+  import { authConfig } from './auth.config';
+
+  export default NextAuth(authConfig).auth;
+
+  export const config = {
+    // https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
+    matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
+  };
+  ```
+
+- **Step 6: Password hashing**:
+
+  - Password hashing is a technique used to protect passwords from being read or accessed by unauthorized parties.
+  - Create a new file called `auth.ts` and add the following code to it:
+
+  ```bash
+  import NextAuth from 'next-auth';
+  import { authConfig } from './auth.config';
+  export const { auth, signIn, signOut } = NextAuth({
+  ...authConfig,
+  });
+  ```
+
+- **Step 7: Adding the Credentials provider**:
+
+  - Add following code to `auth.ts`
+
+  ```bash
+  import NextAuth from 'next-auth';
+  import { authConfig } from './auth.config';
+  import Credentials from 'next-auth/providers/credentials';
+  export const { auth, signIn, signOut } = NextAuth({
+  ...authConfig,
+  providers: [Credentials({})],
+  });
+  ```
+
+- **Step 8: Adding the sign in functionality**:
+
+  - Add the following code to `auth.ts`
+
+  ```bash
+  import NextAuth from 'next-auth';
+  import { authConfig } from './auth.config';
+  import Credentials from 'next-auth/providers/credentials';
+  import { z } from 'zod';
+
+  export const { auth, signIn, signOut } = NextAuth({
+    ...authConfig,
+    providers: [
+      Credentials({
+        async authorize(credentials) {
+          const parsedCredentials = z
+            .object({ email: z.string().email(), password: z.string().min(6) })
+            .safeParse(credentials);
+        },
+      }),
+    ],
+  });
+
+  ```
+
+- **Step 9: Updating the login form**:
+  - Connect the auth logic with your login form
+- **Step 10: Adding the logout functionality**:
+
+### Chapter 16: Adding Metadata
 
 ---
 
