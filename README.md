@@ -272,6 +272,73 @@
 
 ### Chapter 16: Adding Metadata
 
+- **Metadata**:
+
+  - Metadata means `data about data`.
+  - Metadata plays a significant role in enhancing a webpage's SEO, making it more accessible and understandable for search engines and social media platforms.
+  - **Types of metadata**: - There are various types of metadata, each serving a unique purpose.
+    Some common types include:
+
+  1. **_Title Metadata_**:
+
+  - Responsible for the title of a webpage that is displayed on the browser tab. It's crucial for SEO as it helps search engines understand what the webpage is about.
+
+    ```bash
+    <title>Page Title</title>
+    ```
+
+  2. **_Description Metadata_**:
+
+  - This metadata provides a brief overview of the webpage content and is often displayed in search engine results.
+
+    ```bash
+    <meta name="description" content="A brief description of the page content." />
+    ```
+
+  3. **_Keyword Metadata_**:
+
+  - This metadata includes the keywords related to the webpage content, helping search engines index the page.
+
+    ```bash
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    ```
+
+  4. **_Open Graph Metadata_**:
+
+  - This metadata enhances the way a webpage is represented when shared on social media platforms, providing information such as the title, description, and preview image.
+
+    ```bash
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:image" content="image_url_here" />
+    ```
+
+  5. **_Favicon Metadata_**:
+
+  - This metadata links the favicon (a small icon) to the webpage, displayed in the browser's address bar or tab.
+
+    ```bash
+    <link rel="icon" href="path/to/favicon.ico" />
+    ```
+
+  - Next.js has a Metadata API that can be used to define your application metadata. There are two ways you can add metadata to your application:
+
+  1. **_Config-based_**: Export a static `metadata` object or a dynamic `generateMetadata` function in a `layout.js` or `page.js` file.
+
+  2. **_File-based_**: Next.js has a range of special files that are specifically used for metadata purposes:
+
+  - `favicon.ico`, `apple-icon.jpg`, and `icon.jpg`: Utilized for favicons and icons
+  - `opengraph-image.jpg` and `twitter-image.jpg`: Employed for social media images
+  - `robots.txt` : Provides instructions for search engine crawling
+  - `sitemap.xml` : Offers information about the website's structure
+
+**ImageResponse** :
+The `ImageResponse` constructor allows you to generate dynamic images using JSX and CSS. This is useful for generating social media images such as Open Graph images, Twitter cards, and more.
+
+- Use the `title.template` field in the `metadata object` to define a `template` for your page titles. This template can include the page title, and any other information you want to include.
+
+**_The `%s` in the template will be replaced with the specific page title._**
+
 ---
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
