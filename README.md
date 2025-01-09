@@ -18,6 +18,7 @@
   - [Chapter 12: Mutating data!](#chapter-12-mutating-data)
   - [Chapter 13: Handling Errors](#chapter-13-handling-errors)
   - [Chapter 14: Improving Accessibility](#chapter-14-improving-accessibility)
+- [Day 3 (Jan 06)](#day-3-jan-06)
   - [Chapter 15: Adding Authentication](#chapter-15-adding-authentication)
   - [Chapter 16: Adding Metadata](#chapter-16-adding-metadata)
 
